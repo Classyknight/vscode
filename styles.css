@@ -1,0 +1,77 @@
+/* Fondo */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #e0e4e8, #ffffff);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Reloj */
+  .reloj {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #0f73cb;
+    border: 8px solid #fbf8f8eb;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Números */
+  .numero {
+    position: absolute;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  
+    /* Posicionar en círculo */
+    top: calc(50% - 130px * cos(calc(30deg * var(--i))));
+    left: calc(50% + 130px * sin(calc(30deg * var(--i))));
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Manecillas */
+  .manecilla {
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: #333;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%; /* Punto exacto de rotación */
+    transform: rotate(0deg);
+    border-radius: 4px;
+  }
+  
+  .hora {
+    width: 25%; /* Más corta */
+    height: 6px;
+    background: #555;
+  }
+  
+  .minuto {
+    width: 40%; /* Mediana */
+    height: 4px;
+    background: #666;
+  }
+  
+  .segundo {
+    width: 45%; /* Más larga */
+    height: 2px;
+    background: red;
+  }
+  
+  .centro {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
